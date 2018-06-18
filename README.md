@@ -22,14 +22,18 @@ plugin](https://github.com/vimwiki/vimwiki).
 ### Usage
 1. First, convert the .ORG file to "raw" markdown using:
 
-    convert-org-to-md.sh my-file.org
+   ```{bash}
+   convert-org-to-md.sh my-file.org
+   ```
 
 2. Now, you should have a file called `my-file.md`. However, Pandoc adds many
    escape characters, whitespace, and even some HTML tags, so let's clean those
    up by running (Note that we want to clean our new Markdown file, not our old
    Org file):
 
+    ```{bash}
     clean-pandoc-markdown.sh my-file.md
+    ```
 
 That's it! Now open your `my-file.md` for full Markdown enjoyment. These output
 Markdown files should be fully compatible with Pandoc's document conversion,
